@@ -1,0 +1,746 @@
+{
+  "input": {
+    "workflow": {
+      "12": {
+        "inputs": {
+          "value": -1
+        },
+        "class_type": "Seed (rgthree)",
+        "_meta": {
+          "title": "Seed (rgthree)"
+        }
+      },
+      "128": {
+        "inputs": {
+          "value": 6,
+          "model": [
+            "321",
+            0
+          ]
+        },
+        "class_type": "Skimmed CFG",
+        "_meta": {
+          "title": "Skimmed CFG"
+        }
+      },
+      "134": {
+        "inputs": {
+          "text": "12"
+        },
+        "class_type": "Float",
+        "_meta": {
+          "title": "CFG"
+        }
+      },
+      "135": {
+        "inputs": {
+          "text": "30"
+        },
+        "class_type": "Int",
+        "_meta": {
+          "title": "Steps"
+        }
+      },
+      "140": {
+        "inputs": {
+          "filename": "Pony/realistic/cyberrealisticPony_v141.safetensors"
+        },
+        "class_type": "Checkpoint Loader with Name (Image Saver)",
+        "_meta": {
+          "title": "Checkpoint Loader with Name (Image Saver)"
+        }
+      },
+      "142": {
+        "inputs": {
+          "filename": "1024x1024 (1.0)"
+        },
+        "class_type": "SDXLEmptyLatentSizePicker+",
+        "_meta": {
+          "title": "SDXLEmptyLatentSizePicker+"
+        }
+      },
+      "144": {
+        "inputs": {
+          "filename": "pony/ftasticVAE_v10.safetensors"
+        },
+        "class_type": "VAELoader",
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "168": {
+        "inputs": {
+          "text": "score_9, score_8_up, score_7_up,\n\nmasterpiece, \nrealistic, \nraw photo, \ncinematic, \nanalog, \n8k, \ndepth of field, \nvolumetric lighting, \nbokeh, \nbest quality, \nhighres, \nshot on Canon EOS 5D,\n\ninstagram model, cute, beautiful,\n\n2girls, yuri, slender, small breasts, blonde long curly hair , brown pixie cut hair, no lineart, dramatic lighting, squatting, cunnilingus, facesitting, hands on knees, moaning, pussy juice\n ",
+          "model": [
+            "140",
+            0
+          ],
+          "clip": [
+            "192",
+            0
+          ]
+        },
+        "class_type": "ImpactWildcardEncode",
+        "_meta": {
+          "title": "Positive WildcardEncode"
+        }
+      },
+      "192": {
+        "inputs": {
+          "value": -2,
+          "clip": [
+            "140",
+            1
+          ]
+        },
+        "class_type": "CLIPSetLastLayer",
+        "_meta": {
+          "title": "CLIPSetLastLayer"
+        }
+      },
+      "196": {
+        "inputs": {
+          "text": "%date-%time-%basemodelname-%cfg-%steps-%sampler_name-%scheduler-%seed",
+          "images": [
+            "235",
+            0
+          ],
+          "steps": [
+            "233",
+            0
+          ],
+          "cfg": [
+            "229",
+            0
+          ],
+          "modelname": [
+            "251",
+            0
+          ],
+          "sampler_name": [
+            "248",
+            0
+          ],
+          "positive": [
+            "238",
+            0
+          ],
+          "negative": [
+            "258",
+            0
+          ],
+          "seed_value": [
+            "245",
+            0
+          ],
+          "width": [
+            "242",
+            0
+          ],
+          "height": [
+            "241",
+            0
+          ]
+        },
+        "class_type": "Image Saver",
+        "_meta": {
+          "title": "Image Saver"
+        }
+      },
+      "204": {
+        "inputs": {
+          "value": 652120458811006,
+          "model": [
+            "428",
+            0
+          ],
+          "positive": [
+            "428",
+            3
+          ],
+          "negative": [
+            "428",
+            4
+          ],
+          "latent_image": [
+            "313",
+            0
+          ],
+          "optional_vae": [
+            "311",
+            0
+          ],
+          "seed": [
+            "318",
+            0
+          ],
+          "steps": [
+            "315",
+            0
+          ],
+          "cfg": [
+            "314",
+            0
+          ]
+        },
+        "class_type": "KSampler (Efficient)",
+        "_meta": {
+          "title": "KSampler (Efficient)"
+        }
+      },
+      "219": {
+        "inputs": {
+          "text": [
+            "321",
+            3
+          ]
+        },
+        "class_type": "ShowText|pysssss",
+        "_meta": {
+          "title": "Current Negative Text"
+        }
+      },
+      "227": {
+        "inputs": {
+          "text": "Clean Negative Prompt",
+          "STRING": [
+            "321",
+            3
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Clean Negative Prompt"
+        }
+      },
+      "228": {
+        "inputs": {
+          "text": "CFG",
+          "FLOAT": [
+            "134",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_CFG"
+        }
+      },
+      "229": {
+        "inputs": {
+          "text": "CFG"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_CFG"
+        }
+      },
+      "231": {
+        "inputs": {
+          "text": "Steps",
+          "INT": [
+            "135",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Steps"
+        }
+      },
+      "233": {
+        "inputs": {
+          "text": "Steps"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Steps"
+        }
+      },
+      "235": {
+        "inputs": {
+          "text": "Generated Image"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Generated Image"
+        }
+      },
+      "237": {
+        "inputs": {
+          "text": "Positive Prompt",
+          "STRING": [
+            "168",
+            3
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Positive Prompt"
+        }
+      },
+      "238": {
+        "inputs": {
+          "text": "Positive Prompt"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Positive Prompt"
+        }
+      },
+      "239": {
+        "inputs": {
+          "text": "Width",
+          "INT": [
+            "142",
+            1
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Width"
+        }
+      },
+      "240": {
+        "inputs": {
+          "text": "Height",
+          "INT": [
+            "142",
+            2
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Height"
+        }
+      },
+      "241": {
+        "inputs": {
+          "text": "Height"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Height"
+        }
+      },
+      "242": {
+        "inputs": {
+          "text": "Width"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Width"
+        }
+      },
+      "243": {
+        "inputs": {
+          "text": "Seed",
+          "INT": [
+            "12",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Seed"
+        }
+      },
+      "245": {
+        "inputs": {
+          "text": "Seed"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Seed"
+        }
+      },
+      "246": {
+        "inputs": {
+          "text": "Sampler",
+          "STRING": [
+            "362",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Sampler"
+        }
+      },
+      "247": {
+        "inputs": {
+          "text": "Scheduler",
+          "STRING": [
+            "360",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Scheduler"
+        }
+      },
+      "248": {
+        "inputs": {
+          "text": "Sampler"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Sampler"
+        }
+      },
+      "249": {
+        "inputs": {
+          "text": "Scheduler"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Scheduler"
+        }
+      },
+      "250": {
+        "inputs": {
+          "text": "Model",
+          "STRING": [
+            "140",
+            3
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Model"
+        }
+      },
+      "251": {
+        "inputs": {
+          "text": "Model"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Model"
+        }
+      },
+      "252": {
+        "inputs": {
+          "text": "Generated Image",
+          "IMAGE": [
+            "328",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Generated Image"
+        }
+      },
+      "258": {
+        "inputs": {
+          "text": "Clean Negative Prompt"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Clean Negative Prompt"
+        }
+      },
+      "307": {
+        "inputs": {
+          "text": "Latent",
+          "LATENT": [
+            "142",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_Latent"
+        }
+      },
+      "310": {
+        "inputs": {
+          "text": "VAE",
+          "VAE": [
+            "140",
+            2
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_VAE"
+        }
+      },
+      "311": {
+        "inputs": {
+          "text": "VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_VAE"
+        }
+      },
+      "313": {
+        "inputs": {
+          "text": "Latent"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Latent"
+        }
+      },
+      "314": {
+        "inputs": {
+          "text": "CFG"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_CFG"
+        }
+      },
+      "315": {
+        "inputs": {
+          "text": "Steps"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Steps"
+        }
+      },
+      "318": {
+        "inputs": {
+          "text": "Seed"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_Seed"
+        }
+      },
+      "321": {
+        "inputs": {
+          "text": "score_6, score_5, score_4, bad quality, worst quality, worst detail, sketch, censorship, furry, patreon, text, artist name, artist signature, glowing eyes, eye glow, lowres, worst quality,low quality,low score,bad score,blurry,text,ugly,hooded eyes, asian, bad teeth, deformed mouth, deformed lips, bad lips, ",
+          "model": [
+            "168",
+            0
+          ],
+          "clip": [
+            "168",
+            1
+          ]
+        },
+        "class_type": "ImpactWildcardEncode",
+        "_meta": {
+          "title": "Negative WildcardEncode"
+        }
+      },
+      "328": {
+        "inputs": {
+          "any_01": [
+            "396",
+            0
+          ],
+          "any_02": [
+            "204",
+            5
+          ]
+        },
+        "class_type": "Any Switch (rgthree)",
+        "_meta": {
+          "title": "Any Switch (rgthree)"
+        }
+      },
+      "360": {
+        "inputs": {
+          "value": 204
+        },
+        "class_type": "WidgetToString",
+        "_meta": {
+          "title": "Get Scheduler Name"
+        }
+      },
+      "362": {
+        "inputs": {
+          "value": 204
+        },
+        "class_type": "WidgetToString",
+        "_meta": {
+          "title": "Get Sampler Name"
+        }
+      },
+      "377": {
+        "inputs": {
+          "text": [
+            "168",
+            3
+          ]
+        },
+        "class_type": "ShowText|pysssss",
+        "_meta": {
+          "title": "ShowText|pysssss"
+        }
+      },
+      "390": {
+        "inputs": {
+          "upscale_model": [
+            "391",
+            0
+          ],
+          "image": [
+            "204",
+            5
+          ]
+        },
+        "class_type": "ImageUpscaleWithModel",
+        "_meta": {
+          "title": "ImageUpscaleWithModel"
+        }
+      },
+      "391": {
+        "inputs": {
+          "model_name": "RealESRGAN_x2.pth"
+        },
+        "class_type": "UpscaleModelLoader",
+        "_meta": {
+          "title": "UpscaleModelLoader"
+        }
+      },
+      "392": {
+        "inputs": {
+          "text": "lanczos",
+          "image": [
+            "390",
+            0
+          ]
+        },
+        "class_type": "ImageScaleBy",
+        "_meta": {
+          "title": "ImageScaleBy"
+        }
+      },
+      "393": {
+        "inputs": {
+          "pixels": [
+            "392",
+            0
+          ],
+          "vae": [
+            "394",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "394": {
+        "inputs": {
+          "text": "VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_VAE"
+        }
+      },
+      "395": {
+        "inputs": {
+          "seed": 131217257523837,
+          "steps": 15,
+          "cfg": 4,
+          "sampler_name": "dpmpp_2m",
+          "scheduler": "karras",
+          "denoise": 0.3500000000000001,
+          "model": [
+            "428",
+            0
+          ],
+          "positive": [
+            "428",
+            3
+          ],
+          "negative": [
+            "428",
+            4
+          ],
+          "latent_image": [
+            "393",
+            0
+          ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "396": {
+        "inputs": {
+          "samples": [
+            "395",
+            0
+          ],
+          "vae": [
+            "394",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "399": {
+        "inputs": {},
+        "class_type": "Fast Groups Bypasser (rgthree)",
+        "_meta": {
+          "title": "Fast Groups Bypasser (rgthree)"
+        }
+      },
+      "428": {
+        "inputs": {
+          "basic_pipe": [
+            "441",
+            0
+          ]
+        },
+        "class_type": "FromBasicPipe",
+        "_meta": {
+          "title": "FromBasicPipe"
+        }
+      },
+      "441": {
+        "inputs": {
+          "model": [
+            "168",
+            0
+          ],
+          "clip": [
+            "168",
+            1
+          ],
+          "vae": [
+            "442",
+            0
+          ],
+          "positive": [
+            "168",
+            2
+          ],
+          "negative": [
+            "321",
+            2
+          ]
+        },
+        "class_type": "ToBasicPipe",
+        "_meta": {
+          "title": "ToBasicPipe"
+        }
+      },
+      "442": {
+        "inputs": {
+          "text": "VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_VAE"
+        }
+      }
+    }
+  }
+}
